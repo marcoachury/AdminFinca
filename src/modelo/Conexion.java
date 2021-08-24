@@ -14,9 +14,9 @@ import org.sqlite.SQLiteConnection;
  * @author User
  */
 public class Conexion {
+    String path;
 
-
-    test(){
+    public probar(String path){
 
 
 
