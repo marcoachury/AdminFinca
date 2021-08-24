@@ -5,6 +5,12 @@
  */
 package admifinca;
 
+import modelo.Sample;
+import Sample;
+import java.awt.image.SampleModel;
+
+
+        
 /**
  *
  * @author User
@@ -16,7 +22,15 @@ public class AdmiFinca {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Todo bien!!");
+        System.out.println("Ejecutando main");
+        
+        Sample ejemplo = new Sample();
+        
+        ejemplo.main();
+        
+        
+        
+        
     }
     
     
