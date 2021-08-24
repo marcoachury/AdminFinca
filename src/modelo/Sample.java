@@ -17,11 +17,8 @@ package modelo;
     import java.sql.Statement;
 
 
-    public class conexion()
-{
+    
 
-}
-/*
     public class Sample
     {
       //   
@@ -70,5 +67,4 @@ package modelo;
       }
 
     }
-*/
 
