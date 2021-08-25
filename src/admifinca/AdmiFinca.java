@@ -5,12 +5,11 @@
  */
 package admifinca;
 
+import java.sql.SQLException;
+import modelo.Conexion;
 import modelo.Sample;
-import Sample;
-import java.awt.image.SampleModel;
 
-
-        
+ 
 /**
  *
  * @author User
@@ -19,20 +18,25 @@ public class AdmiFinca {
 
     /**
      * @param args the command line arguments
+     * @throws java.sql.SQLException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         // TODO code application logic here
         System.out.println("Ejecutando main");
         
-        Sample ejemplo = new Sample();
+        //Sample ejemplo = new Sample();
+        //Sample.main();
         
-        ejemplo.main();
-        
-        
+        if (Conexion.probar_base_de_datos("finca.sqlite")){
+            System.out.println("Base de datos conectada");
+        }
+           
         
         
     }
     
     
-    
+            
+            
+
 }

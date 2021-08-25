@@ -17,8 +17,6 @@ package modelo;
     import java.sql.Statement;
 
 
-    
-
     public class Sample
     {
       //   
