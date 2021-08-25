@@ -5,7 +5,9 @@
  */
 package modelo;
 
-import org.sqlite.SQLiteConnection;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 
         
@@ -14,13 +16,21 @@ import org.sqlite.SQLiteConnection;
  * @author User
  */
 public class Conexion {
-    String path;
 
-    public probar(String path){
-
-
-
+    //Probar si la base de datos existe y se puede abrir
+    public static boolean probar_base_de_datos(String path) throws SQLException{
+        path = "jdbc:sqlite:"+path;
+        try {
+            System.out.println("Probando base de datos");
+            DriverManager.getConnection(path);
+            
+        }
+        catch (Exception e) {
+          return false;
+        }
+        return true;
     }
+    
     
 }
 
