@@ -5,19 +5,20 @@
  */
 package modelo;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
-        
-/**
- * https://github.com/xerial/sqlite-jdbc
- * @author User
- */
+// Clase que maneja la conexion a un archivo de base de datos SQLITE
 public class Conexion {
 
-    //Probar si la base de datos existe y se puede abrir
+    
+
+    /**
+     * //Probar si la base de datos existe y se puede abrir //
+     * @param path: El nombre del archivo de base de datos SQLITE
+     * @return Booleano: True si el archivo existe y se logra conectar, false si no.
+     * @throws SQLException
+     */
     public static boolean probar_base_de_datos(String path) throws SQLException{
         path = "jdbc:sqlite:"+path;
         try {
@@ -25,11 +26,13 @@ public class Conexion {
             DriverManager.getConnection(path);
             
         }
-        catch (Exception e) {
+        catch (SQLException e) {
           return false;
         }
         return true;
     }
+    
+    
     
     
 }
