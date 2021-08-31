@@ -29,14 +29,6 @@ public class AdmiFinca {
         
         if (Conexion.probar_base_de_datos("finca.sqlite")){
             System.out.println("Base de datos conectada");
-        }
-           
-        
-        
+        }   
     }
-    
-    
-            
-            
-
 }

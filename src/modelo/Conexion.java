@@ -5,13 +5,14 @@
  */
 package modelo;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 // Clase que maneja la conexion a un archivo de base de datos SQLITE
 public class Conexion {
-
-    
+    Connection conexion;
 
     /**
      * //Probar si la base de datos existe y se puede abrir //
@@ -32,6 +33,26 @@ public class Conexion {
         return true;
     }
     
+    public void conectar(){
+        //Connection conexion = new Connection;
+        try{
+            conexion=DriverManager.getConnection(path);
+            
+        
+        } catch(SQLException ex){
+            System.out.println("Error base de datos: " + ex);
+        }
+    }
+    
+    public void cerrar_conexion(){
+        try{
+            conexion.close();
+        }
+        catch(SQLException ex){
+            System.out.println("Error cerrando base de datos: "+ex);
+            //Logger.getLogger(string, string1)
+        }
+    }
     
     
     
